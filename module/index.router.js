@@ -8,7 +8,7 @@ const messageRouter = require("./message/message.router");
 
 
 module.exports  = {
-    userRouter ,
+    // userRouter ,
     authRouter ,
     messageRouter
 }
