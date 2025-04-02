@@ -12,6 +12,9 @@ app.use(express.json())
 // app.use(moduleRouter.authRouter,
 //     moduleRouter.userRouter,
 //     moduleRouter.messageRouter)
+app.get("/", (req, res) => {
+  res.json({ msg: "Hello User App is running" });
+});
 app.use('/api/v1/auth',moduleRouter.authRouter)
 // app.use('/api/v1/user',moduleRouter.userRouter)
 app.use('/api/v1',moduleRouter.messageRouter)
