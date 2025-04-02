@@ -12,7 +12,7 @@ const signin = async (req, res) => {
             if (!match) {
                 res.json({ message: "in-valid password" })
             } else {
-                const token = jwt.sign({ id: user._id, isLoggedIn: true },
+                const token = jwt.sign({ id: user._id, isLoggedIn: true, name: user.name },
                     process.env.tokenSignature, { expiresIn: '1h' })
                 res.json({ message: "Done", token })
             }
